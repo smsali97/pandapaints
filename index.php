@@ -52,7 +52,7 @@
 
 <a href="/pandapaints/login.php">Login</a> | <a href="/pandapaints/register.php">Register</a>
 <p>
-Welcome to Panda Paints ^_^
+Welcome to Panda Paints Shop, feel yourself at home ^_^
 </p>
 </div>
 </div>
