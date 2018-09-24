@@ -49,7 +49,6 @@
 <div class="row">
 <div class="col-md-12">
 <h2>Home</h2>
-
 <a href="/pandapaints/login.php">Login</a> | <a href="/pandapaints/register.php">Register</a>
 <p>
 Welcome to Panda Paints Shop, pandas love paint too! ^_^
