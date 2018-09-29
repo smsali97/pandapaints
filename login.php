@@ -125,8 +125,19 @@ session_start();
                 </form>
             </div>
             <div class="col-md-6"></div>
+
         </div>
+        <p class="text-warning">Some sample accounts to play with: 
+<ul>
+<li> Admin: sysadmin (username) sysadmin (password) </li>
+<li> User: sualeh (username) sualeh (password) </li>
+<li> User: john (username) john (password) </li>
+</ul>
+</p>
+  <h5 class="text-danger">WITH GREAT POWER COMES GREAT RESPONSIBILITY. PLEASE DO NOT MESS WITH THE ACOUNTS. THE CREDENTIALS PROVIDED IS FOR DEMONSTRATION PURPOSES ONLY.</h5></p>
     </div>
+
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     
