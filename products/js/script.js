@@ -96,7 +96,6 @@ function updateRecordDetails() {
     var id = $("#hidden_id").val();
     var shade = $("#updated_shade").val();
 
-    alert(id);
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateRecordDetails.php", {

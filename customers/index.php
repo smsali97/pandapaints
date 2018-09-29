@@ -35,8 +35,11 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 					}
 
 					</style>
+				<li><a href="/pandapaints/salesorders/">Sales Orders</a></li>
 				<li><a class="nav-link active" href="/pandapaints/customers/">Customers</a></li>
 				<li><a href="/pandapaints/products/">Products</a></li>
+
+
 
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

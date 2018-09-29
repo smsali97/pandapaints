@@ -40,6 +40,8 @@
 				<li><a href="/pandapaints/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 				<li><a href="/pandapaints/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
+
+        
 		</div>
 	</nav> 
 
@@ -48,11 +50,9 @@
 <div class="container">
 <div class="row">
 <div class="col-md-12">
-<h2>Home</h2>
-<a href="/pandapaints/login.php">Login</a> | <a href="/pandapaints/register.php">Register</a>
-<p>
-Welcome to Panda Paints Shop, pandas love paint too! ^_^
-</p>
+<center><h1 style="font-family: sans-serif;"><b>Welcome to Panda Paints!</b></h1>
+<img src="panda.gif" alt="An awesome picture of panda dancing" class="img-responsive center-block" />
+</center>
 </div>
 </div>
 </div>

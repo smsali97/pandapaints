@@ -7,7 +7,7 @@ session_start();
 
 	// Design initial table header 
 	$data = '<table class="table table-striped">
-			<thead class="thead">
+			<thead class="thead-dark">
 						<tr class="bg-warning">
 							<th scope=\'col\'>#</th>
 							<th scope=\'col\'>Salesperson Name</th>

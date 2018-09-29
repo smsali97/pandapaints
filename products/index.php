@@ -4,6 +4,7 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 	if (!isset($_SESSION['id'])) {
 		header('location: /pandapaints/login.php');
 	}
+	require 'ajax/db_connection.php';
 ?>
 
 
@@ -43,8 +44,11 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 					}
 
 					</style>
+				<li><a href="/pandapaints/salesorders/">Sales Orders</a></li>
 				<li ><a href="/pandapaints/customers/">Customers</a></li>
-				<li class="active bg-light"><a href="/pandapaints/products/">Products</a></li>
+				<li class="active bg-lighT"><a href="/pandapaints/products/">Products</a></li>
+
+
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a>Welcome back <?php echo $_SESSION['username']; ?>!</a></li>
