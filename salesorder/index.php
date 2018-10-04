@@ -7,6 +7,7 @@ if (!isset($_SESSION['id'])) {
 
 	require 'ajax/db_connection.php';
 	require 'ajax/loadCustomer.php';
+	require 'ajax/loadProduct.php';
 ?>
 
 
@@ -21,7 +22,7 @@ if (!isset($_SESSION['id'])) {
 <body>
 
 	<!-- Content Section -->
-	<nav class="nav">
+	<nav class="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Panda Paints</a>
@@ -36,7 +37,7 @@ if (!isset($_SESSION['id'])) {
 
 				
 			</style>
-			<li class="nav-item active"><a class="nav-link" href="/pandapaints/salesorders/">Sales Order</a></li>
+			<li class="nav-item active"><a class="nav-link" href="/pandapaints/salesorder/">Sales Order</a></li>
 			<li class="nav-item"><a class="nav-link" href="/pandapaints/customers/">Customers</a></li>
 			<li class="nav-item"><a class="nav-link" href="/pandapaints/products/">Products</a></li>
 		</ul>
@@ -59,27 +60,30 @@ if (!isset($_SESSION['id'])) {
 			<div class="pull-right">
 					<button id="new_sales_order" class="btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Add New Sales Order</button>
 			</div>
-			<div class="page-header">
+			<div class="page-header text-center">
   				<h2>My Sales Order</h2>
 			</div>
 			<div class="records_content"></div>
 			
 
-			<div id="salesorderlines" style="display: none"s>
-			<div class="page-header">
+			<div id="salesorderlines" style="display: none">
+			<div class="page-header text-center">
   				<h2>My Sales Order Lines</h2>
-  			</div>
-  				<div class="pull-right">
-					<button id="new_sales_order" class="btn btn-success" data-toggle="modal" data-target="#add_new_salesorderline_modal">Add New Sales Order</button>
-				</div>
-			<div class="records_content2"></div>
 			</div>
+  			<div class="pull-right">
+					<button id="new_sales_order" class="btn btn-success" data-toggle="modal" data-target="#add_new_salesorderline_modal">Add New Sales Order Line</button>
+			</div>
+			<br> <br>
+			<div class="records_content2"></div>
+			
 		</div>
 	</div>
 </div>
 
 
+
 <input type="hidden" id="hidden_order_no">
+<input type="hidden" id="hidden_pid">
 
 <!-- Modal -->
 	<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -105,48 +109,82 @@ if (!isset($_SESSION['id'])) {
 		</div>
 	</div>
 
+	<div class="modal fade" id="add_new_salesorderline_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">Add New Sales Order Line</h4>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label for="product">
+						Select Product
+				  		</label>
+						<select class="form-control product" name="product" id="product">
+							<?php echo fill_product($con); ?>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="qty">Quantity</label>
+						<input type="number" id="qty" placeholder="Quantity" class="form-control" />
+					</div>
 
 
-<!-- 			
-			<table class="table table-hover table-sm"" class="align-middle"> 
-				<thead class="bg-info">
-					<tr>
-						<th>Customer Name</th>
-						<th>Address</th>
-						<th>Area</th>
-						<th>Assigned Salesperson</th>
-						<th>Action</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<select class="form-control customer" name="customer" id="customer">
-							<?php echo fill_customer($con); ?>
-							</select>
-						</td>
-						<td id="address"></td>
-						<td id="area"></td>
-						<td id="spname"></td>
-						<td>
-							<button type="button" class="btn btn-info" onclick="launchSalesOrder()" >
-								Add Sales Order
-							</button>
-						</td>
-					</tr>
-					<tr>
-					</tr>
-				</tbody>
-			</table>
+					<div class="form-group">
+						<label for="rate">Rate</label>
+						<input type="number" id="rate" placeholder="Rate" class="form-control" />
+					</div>
 
-			<div class="page-header">
-  				<h2>Sales Order Line</h2>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" onclick="addSalesOrderLine()">Add</button>
+				</div>
 			</div>
 		</div>
 	</div>
+
+
+	<div class="modal fade" id="update_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+					<h4 class="modal-title" id="myModalLabel">Update New Sales Order Line</h4>
+				</div>
+				<div class="modal-body">
+
+					<div class="form-group">
+						<label for="product">
+						Select Product
+				  		</label>
+						<select class="form-control product" name="updated_product" id="updated_product">
+							<?php echo fill_product($con); ?>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="qty">Quantity</label>
+						<input type="number" id="updated_qty" placeholder="Quantity" class="form-control" />
+					</div>
+
+
+					<div class="form-group">
+						<label for="rate">Rate</label>
+						<input type="number" id="updated_rate" placeholder="Rate" class="form-control" />
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" onclick="updateRecordDetails()">Add</button>
+				</div>
+			</div>
+		</div>
 	</div>
-</diSv>
- -->
 
 <!-- /Content Section -->
 

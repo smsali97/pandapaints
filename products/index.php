@@ -30,33 +30,37 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 <body>
 
 		<!-- Content Section -->
-	<nav class="navbar bg-light">
+	<nav class="navbar">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">Panda Paints</a>
 
 			</div>
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav nav-pills nav-fill">
 				<li><img src="/pandapaints/panda.png" class="img-responsive img-icons"></li>
-				   <style>
-					.img-icons {
-					     padding: 0.5em;
-					}
+				<style>
+				.img-icons {
+					padding: 0.5em;
+				}
 
-					</style>
-				<li><a href="/pandapaints/salesorders/">Sales Orders</a></li>
-				<li ><a href="/pandapaints/customers/">Customers</a></li>
-				<li class="active bg-lighT"><a href="/pandapaints/products/">Products</a></li>
+				
+			</style>
+			<li class="nav-item"><a class="nav-link" href="/pandapaints/salesorder/">Sales Order</a></li>
+			<li class="nav-item"><a class="nav-link" href="/pandapaints/customers/">Customers</a></li>
+			<li class="nav-item active"><a class="nav-link" href="/pandapaints/products/">Products</a></li>
+		</ul>
 
-
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li><a>Welcome back <?php echo $_SESSION['username']; ?>!</a></li>
-				<li><a href="/pandapaints/logout.php?logout=true"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+		<div class="pull-right">
+			<ul class="nav pull-right">
+				<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome back <?php echo $_SESSION['username']; ?>!<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li class="nav-item"><a href="/pandapaints/logout.php?logout=true"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
-	</nav> 
-
+	</div>
+</nav> 
 	<!-- Content Section -->
 	<div class="container">
 		<div class="row">

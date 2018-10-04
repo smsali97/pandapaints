@@ -12,6 +12,6 @@
 		if (!$result = mysqli_query($con, $query)) {
 	        exit(mysqli_error($con));
 	    }
-   
+	    echo "1 Sales Order Successfully Added! (Phew) ";
 	}
 ?>
