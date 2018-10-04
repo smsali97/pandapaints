@@ -68,7 +68,10 @@ if (!isset($_SESSION['id'])) {
 			<div id="salesorderlines" style="display: none"s>
 			<div class="page-header">
   				<h2>My Sales Order Lines</h2>
-			</div>
+  			</div>
+  				<div class="pull-right">
+					<button id="new_sales_order" class="btn btn-success" data-toggle="modal" data-target="#add_new_salesorderline_modal">Add New Sales Order</button>
+				</div>
 			<div class="records_content2"></div>
 			</div>
 		</div>

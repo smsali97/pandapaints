@@ -8,8 +8,7 @@
 		$spid = $_POST['spid'];
 
 
-		$query = "INSERT INTO salesorder_13005(cid, spid, sdate) VALUES('$cid','$spid'
-		, CURRENT_DATE)";
+		$query = "INSERT INTO salesorder_13005(cid, spid) VALUES('$cid','$spid')";
 		if (!$result = mysqli_query($con, $query)) {
 	        exit(mysqli_error($con));
 	    }
