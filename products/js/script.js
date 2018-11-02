@@ -8,30 +8,59 @@ function addRecord() {
     var shade = $("#shade").val();
     var sales_price = $("#sales_price").val();
 
+    if(pcode == "")
+    {
+        alert("Product Code field is required!");
+    }
+    else if (brand == "")
+    {
+        alert("Brand field is required!");
+    }
+    else if(type == "")
+    {
+        alert("Type field is required!");
+    }
+    else if(size == "")
+    {
+        alert("SIze field is required!");
+    }
+    else if(shade == "")
+    {
+        alert("Shade field is required");
+    }
 
+    else if(sales_price == "")
+    {
+        alert("Sales Price field is required! ");
+    }
 
-    // Add record
-    $.post("ajax/addRecord.php", {
-        pcode: pcode,
-        brand: brand,
-        type: type,
-        size: size,
-        shade: shade,
-        sales_price: sales_price
-    }, function (data, status) {
-        // close the popup
-        $("#add_new_record_modal").modal("hide");
+    else
+    {
 
- 
-        // read records again
-        readRecords();
- 
-        // clear fields from the popup
-        $("#pcode").val("");
-        $("#brand").val("");
-        $("#color").val("");
-        $("#sales_price").val("");
-    });
+        // Add record
+        $.post("ajax/addRecord.php", {
+            pcode: pcode,
+            brand: brand,
+            type: type,
+            size: size,
+            shade: shade,
+            sales_price: sales_price
+        }, function (data, status) {
+            // close the popup
+            $("#add_new_record_modal").modal("hide");
+
+     
+            // read records again
+            readRecords();
+     
+            // clear fields from the popup
+            $("#pcode").val("");
+            $("#brand").val("");
+            $("#color").val("");
+            $("#sales_price").val("");
+        });
+
+    }
 }
     
 $(document).ready(function () {
@@ -96,6 +125,34 @@ function updateRecordDetails() {
     var id = $("#hidden_id").val();
     var shade = $("#updated_shade").val();
 
+        if(pcode == "")
+    {
+        alert("Product Code field is required!");
+    }
+    else if (brand == "")
+    {
+        alert("Brand field is required!");
+    }
+    else if(type == "")
+    {
+        alert("Type field is required!");
+    }
+    else if(size == "")
+    {
+        alert("SIze field is required!");
+    }
+    else if(shade == "")
+    {
+        alert("Shade field is required");
+    }
+
+    else if(sales_price == "")
+    {
+        alert("Sales Price field is required! ");
+    }
+
+    else
+    {
 
     // Update the details by requesting to the server using ajax
     $.post("ajax/updateRecordDetails.php", {
@@ -115,4 +172,6 @@ function updateRecordDetails() {
             readRecords();
         }
     );
+
+    }
 }

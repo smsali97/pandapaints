@@ -67,24 +67,53 @@ function addSalesOrderLine() {
  	let pid = $(".product option:selected").val();
  	let order_no = $("#hidden_order_no").val();
 
- 	let data = {
- 		qty: qty,
- 		rate: rate,
- 		amount: amount,
- 		pid: pid,
- 		order_no: order_no
- 	}
 
- 	$.post("ajax/addSalesOrderLine.php", data,
- 		function (data,status) {
- 			readSalesOrderLines();
- 			$("#add_new_salesorderline_modal").modal("hide");
- 			$("#qty").val();
-    		$("#rate").val();
-            
-    
- 		});
+    if(qty == "")
+    {
+        alert("Quantity field is required!");
+    }
+    else if (rate == "")
+    {
+        alert("Rate is required! duh!");
+    }
+    else if(pid == "")
+    {
+        alert("product ID field is required!");
+    }
+    else if(order_no == "")
+    {
+        alert("Order No is required!");
+    }
+    else if(isNaN(qty) || isNaN(rate))
+    {
+        alert("Enter numerical fields pls");
+    }
 
+    else if(qty < 0 || rate < 0)
+    {
+        alert("Negative numbers not allowed! ");
+    }
+
+    else {
+
+     	let data = {
+     		qty: qty,
+     		rate: rate,
+     		amount: amount,
+     		pid: pid,
+     		order_no: order_no
+     	}
+
+     	$.post("ajax/addSalesOrderLine.php", data,
+     		function (data,status) {
+     			readSalesOrderLines();
+     			$("#add_new_salesorderline_modal").modal("hide");
+     			$("#qty").val();
+        		$("#rate").val();
+                
+        
+     		});
+    }
 }
 
 function readSalesOrderLines() {

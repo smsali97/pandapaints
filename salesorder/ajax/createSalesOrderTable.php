@@ -39,10 +39,10 @@
 
 	        	$sales_return = "";
 	        	if ($row['is_return'] != '1') {
-	        		$sales_return = '<span class="bg-warning glyphicon glyphicon glyphicon-remove-sign style="font-size:25px;color:red"></span>';
+	        		$sales_return = '<span class="glyphicon glyphicon-remove-sign" style="font-size:25px;color:orange"></span>';
 	        	}
 	        	else {
-	        		$sales_return = '<span class="glyphicon glyphicon glyphicon-ok-sign" style="font-size:25px;color:green"></span>';
+	        		$sales_return = '<span class="glyphicon glyphicon-ok-sign" style="font-size:25px;color:green"></span>';
 	        	}
 
 

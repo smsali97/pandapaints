@@ -8,7 +8,34 @@ function addRecord() {
     var gc = $("#gc").val();
     var cno = $("#cno").val();
     
+    if(shop_name == "")
+    {
+        alert("Shop Name field is required!");
+    }
+    else if (customer_name == "")
+    {
+        alert("A Customer is required! duh!");
+    }
+    else if(address == "")
+    {
+        alert("address field is required!");
+    }
+    else if(area == "")
+    {
+        alert("area field is required!");
+    }
+    else if(gc == "")
+    {
+        alert("Geo Coords. field is required");
+    }
 
+    else if(cno == "")
+    {
+        alert("Contact Number field is required! ");
+    }
+
+    else
+    {
     // Add record
     $.post("ajax/addRecord.php", {
         shop_name: shop_name,
@@ -32,6 +59,8 @@ function addRecord() {
         $("#gc").val();
         $("#cno").val();
     });
+
+    }
 }
 
 // READ records
@@ -98,23 +127,51 @@ function updateRecordDetails() {
     // get hidden field value
     var id = $("#hidden_id").val();
 
-    // Update the details by requesting to the server using ajax
-    $.post("ajax/updateRecordDetails.php", {
-            id: id,
-            shop_name: shop_name,
-            customer_name: customer_name,
-            address: address,
-            area: area,
-            gc: gc,
-            cno: cno,
-        },
-        function (data, status) {
+    if(shop_name == "")
+    {
+        alert("Shop Name field is required!");
+    }
+    else if (customer_name == "")
+    {
+        alert("A Customer is required! duh!");
+    }
+    else if(address == "")
+    {
+        alert("address field is required!");
+    }
+    else if(area == "")
+    {
+        alert("area field is required!");
+    }
+    else if(gc == "")
+    {
+        alert("Geo Coords. field is required");
+    }
 
-            console.error(data);
-            // hide modal popup
-            $("#update_modal").modal("hide");
-            // reload Users by using readRecords();
-            readRecords();
-        }
-    );
+    else if(cno == "")
+    {
+        alert("Contact Number field is required! ");
+    }
+    else {
+
+        // Update the details by requesting to the server using ajax
+        $.post("ajax/updateRecordDetails.php", {
+                id: id,
+                shop_name: shop_name,
+                customer_name: customer_name,
+                address: address,
+                area: area,
+                gc: gc,
+                cno: cno,
+            },
+            function (data, status) {
+
+                console.error(data);
+                // hide modal popup
+                $("#update_modal").modal("hide");
+                // reload Users by using readRecords();
+                readRecords();
+            }
+        );
+    }
 }

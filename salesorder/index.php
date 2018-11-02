@@ -99,7 +99,7 @@ if (!isset($_SESSION['id'])) {
 							<?php echo fill_customer($con); ?>
 					</select>
 					<br>
-					<label><input type="checkbox" id="is_return"><em>This is a Sales Return</em></label>
+					<label><input type="checkbox" id="is_return"><em> This is a Sales Return</em></label>
 
 					<input type="hidden" id="hidden_cid">
 					<input type="hidden" id="hidden_spid">
