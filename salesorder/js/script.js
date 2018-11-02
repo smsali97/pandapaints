@@ -23,8 +23,14 @@ $('#customer').change(function() {
 function addSalesOrder(){
 	cid = $("#hidden_cid").val();
 	spid = $("#hidden_spid").val();
+    let is_return = 0
+
+    if ($('#is_return').is(':checked')) {
+        is_return = 1
+    }
 
 	$.post("ajax/addSalesOrder.php",{
+        is_return: is_return,
 		cid: cid,
 		spid: spid
 	}, function (data, status) {

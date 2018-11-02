@@ -98,6 +98,9 @@ if (!isset($_SESSION['id'])) {
 					<select class="form-control customer" name="customer" id="customer">
 							<?php echo fill_customer($con); ?>
 					</select>
+					<br>
+					<label><input type="checkbox" id="is_return"><em>This is a Sales Return</em></label>
+
 					<input type="hidden" id="hidden_cid">
 					<input type="hidden" id="hidden_spid">
 				</div>
