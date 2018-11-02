@@ -7,6 +7,7 @@ function addRecord() {
     var area = $("#area").val();
     var gc = $("#gc").val();
     var cno = $("#cno").val();
+    
 
     // Add record
     $.post("ajax/addRecord.php", {
@@ -42,6 +43,7 @@ function readRecords() {
 }
 
 $(document).ready(function () {
+        
     // READ recods on page load
     readRecords(); // calling function
 });

@@ -2,25 +2,60 @@
 // Add Record 
 function addRecord() {
     // get values
-    var spn_ame = $("#sp_name").val();
+    var sp_name = $("#sp_name").val();
     var cno = $("#cno").val();
+    var username = $("#username").val();
+    var password = $("#username").val();
+    var confirm_password = $("#confirm_password").val();
 
-    // Add record
-    $.post("ajax/addRecord.php", {
-        sp_name: sp_name,
-        cno: cno
-    }, function (data, status) {
-        // close the popup
-        $("#add_new_record_modal").modal("hide");
+    if(username == "")
+    {
+        alert("username field is required!");
+    }
+    else if (password == "")
+    {
+        alert("Password field is required!");
+    }
+    else if(confirm_password == "")
+    {
+        alert("Confirm Password field is required!");
+    }
+    else if(confirm_password != password)
+    {
+        alert("Invalid Confirm password!");
+    }
+        else if(sp_name == "" || cno == "")
+    {
+        alert("Missing Salesperson Information!");
+    }
 
- 
-        // read records again
-        readRecords();
- 
-        // clear fields from the popup
-        $("#sp_name").val("");
-        $("#cno").val("");
-    });
+    else
+    {
+        
+        // Add record
+        $.post("ajax/addRecord.php", {
+            sp_name: sp_name,
+            cno: cno,
+            username: username,
+            password: password,
+        }, function (data, status) {
+            // close the popup
+            $("#add_new_record_modal").modal("hide");
+
+     
+            // read records again
+            readRecords();
+     
+            // clear fields from the popup
+            $("#sp_name").val("");
+            $("#cno").val("");
+            $("#username").val("");
+            $("#password").val("");
+            $("#confirm_password").val("");
+        });
+
+    }
+
 }
     
 $(document).ready(function () {

@@ -77,7 +77,7 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 			<div class="modal-content">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-					<h4 class="modal-title" id="myModalLabel">Add New Salespersons</h4>
+					<h4 class="modal-title" id="myModalLabel">Add New Salesperson</h4>
 				</div>
 				<div class="modal-body">
 
@@ -90,6 +90,21 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 						<label for="cno">Contact Number</label>
 						<input type="tel" id="cno" placeholder="Contact Number" class="form-control" />
 					</div>
+					<br>
+					<span><h3><em>User Account details</em></h3></span>
+					<div class="form-group">
+							<label for="username">Username</label>
+							<input type="text" class="form-control" placeholder="Username" id="username">
+					</div>
+					<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" class="form-control" placeholder="Password" id="password">
+					</div>
+					<div class="form-group">
+					<label for="confirm_password">Password</label>
+					<input type="password" class="form-control" placeholder="Confirm Password" id="confirm_password">
+					</div>
+
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
