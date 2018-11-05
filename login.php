@@ -25,7 +25,7 @@ session_start();
             $username = mysqli_real_escape_string($con, $_POST['username']);
             $password = md5(mysqli_real_escape_string($con, $_POST['password']));
  
-            $query = "SELECT * FROM users_13005 WHERE username = '$username' AND password = '$password'";
+            $query = "SELECT * FROM users_13005 WHERE BINARY username = '$username' AND password = '$password'";
             if(!$result = mysqli_query($con, $query))
             {
                 exit(mysqli_error($con));
