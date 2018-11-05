@@ -1,3 +1,16 @@
+// change Password 
+function changePassword() {
+    username = $("#username").val();
+    password = $("#password").val();
+    data = {
+        username,
+        password,
+    }
+    $.post("/pandapaints/users/ajax/changePassword.php", data,
+    (data, status) => {
+        alert("Password changed successfully");  
+     });
+}
 
 // READ records
 function readRecords() {

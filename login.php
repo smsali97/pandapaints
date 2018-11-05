@@ -128,6 +128,9 @@ session_start();
             <div class="col-md-6"></div>
 
         </div>
+
+        <a class="info" href="/pandapaints/forgotpassword.html">Forgot your password?</a>
+        <br>
         <p class="text-warning">Some sample accounts to play with: 
 <ul>
 <li> Admin: sysadmin (username) sysadmin (password) </li>
