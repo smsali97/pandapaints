@@ -41,6 +41,7 @@ if(isset($_SESSION['id']))
 			<ul class="nav navbar-nav navbar-right">
 				<li class="active"><a href="/pandapaints/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 				<li><a href="/pandapaints/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/salesvisits/">Sales Visits</a></li>
 			</ul>
 		</div>
 	</nav> 
