@@ -1,7 +1,6 @@
 <?php
 
 
-    $API = 'AIzaSyCEXEfOEtj8pjxDteqE1htCLQWwdgqg9xs';
 
 	session_start(); 
 	include("db_connection.php");
