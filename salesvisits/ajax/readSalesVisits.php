@@ -50,8 +50,8 @@
     	        <p>
     	        	<ul class="list-group">
     	        	  <li class="list-group-item"><em>Timestamp: </em>'. date('m/d/Y H:i:s',$timestamp) .'</li>
-    	        	  <li class="list-group-item"><em>Geographical Coordinates: </em>'. $lat . ',' . $long . ')</li>
-    	        	  <li class="list-group-item"><em>Is Product Available?: </em>('. $is_product_available .'</li>
+    	        	  <li class="list-group-item"><em>Geographical Coordinates: </em>('. $lat . ',' . $long . ')</li>
+    	        	  <li class="list-group-item"><em>Is Product Available?: </em>'. $is_product_available .'</li>
     	        	  <li class="list-group-item"><em>Is Product Positioned In Front?: </em>'. $is_product_in_front .'</li>
     	        	  <li class="list-group-item"><em>Is Competitor\'s Products More Promiment?: </em>'. $is_competitor .'</li>
     	        	</ul>
