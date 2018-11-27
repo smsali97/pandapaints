@@ -41,10 +41,11 @@
     	}
 
     	$data .='
-    	  <div class="col-sm-6 col-md-4">
-    	    <div class="thumbnail bg-warning">' . 
+    	  <div class="col-sm-12 col-md-12">
+    	    <div class="thumbnail">' . 
     	    	$image_html
-    	      . '<div class="caption">
+    	      . '</div>
+              <div class="caption">
     	        <h3>Shop\'s picture of ' . $cname . '</h3>
     	        <p>
     	        	<ul class="list-group">
@@ -83,7 +84,6 @@
                 
                 </p>
 
-    	      </div>
     	    </div>
     	  </div>
     	</div>';

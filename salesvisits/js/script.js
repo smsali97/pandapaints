@@ -42,6 +42,9 @@ function showPosition(position) {
     gc.lat = position.coords.latitude;
     gc.long =  position.coords.longitude;
 
+  let text ='<div class="alert alert-success"><strong>Success!</strong> Location added using GPS</div>';
+  $(".container").prepend(text);
+
 }
 
 function readSalesVisits() {
@@ -71,6 +74,12 @@ $('#customer').change(function() {
 
 $("form[name='my-form']").submit(function(e) {
 
+        if ($('#latitude').val() == "" && $('#longitude').val() == "") {
+                  coords = "(" + gc.lat + "," + gc.long + ")";
+        }
+        else {
+           coords = "(" + $('#latitude').val() + "," + $('#longitude').val()  + ")";
+        }
 
         let spid = $("#hidden_spid").val();
         let cid = $("#hidden_cid").val();
@@ -89,8 +98,6 @@ $("form[name='my-form']").submit(function(e) {
             is_competitor = "Yes";
         }
 
-
-        coords = "(" + gc.lat + "," + gc.long + ")";
 
 
 

@@ -14,23 +14,21 @@
 			<title>Field Survey Form</title>
 
 			<!-- Bootstrap CSS File -->
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+			<link rel="stylesheet" href="/pandapaints/assets/bootstrap.min.css">
 
 			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-			  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-			  crossorigin=""/>	
+			  />	
 			<!-- Make sure you put this AFTER Leaflet's CSS -->
 			<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-			    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-			    crossorigin=""></script>
+			    ></script>
 
 			<style>
 
-				.thumbnails {
+				.thumbnail {
 				    text-align:center;
 				}
 
-				.thumbnails > li {
+				li {
 				    display: inline-block;
 				    float: none; /* this is the part that makes it work */
 				}
@@ -99,12 +97,14 @@
 		<input type="hidden" id="hidden_spid"> 
 
 
-
 		<div class="container">
 		  <div class="page-header text-center">
 		  				<h2>Add New Survey Form</h2>
 		  </div>
 
+		  <div id="notification">
+
+		  </div>
 
 
 		  <form class="my-form" method="post" name="my-form" enctype="multipart/form-data">
@@ -146,8 +146,18 @@
 		            <input class="form-check-input" type="checkbox" id="is_competitor"> The Competitors' products are more promiment
 		   			</label>	
 		        </div>
+		      </div>
+		  </div>
+		      <div class="form-group row">
+		      	<div class="col-sm-10">
+		      	<label for="latitude">Latitude</label>
+		      	<input type="number" id="latitude" placeholder="Latitude" class="form-control" />
 		      	</div>
-		    </div>
+		      	<div class="col-sm-10">
+		      	<label for="longitude">Longitude</label>
+		      	<input type="number" id="longitude" placeholder="Longitude" class="form-control" />
+		      	</div>
+		      </div>
 
 		    <div class="form-group row">
 		      <div class="offset-sm-2 col-sm-10">
@@ -171,9 +181,9 @@
 
 		<!-- Jquery JS file -->
 
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="/pandapaints/assets/jquery-3.3.1.min.js"></script>
 		<!-- Bootstrap JS file -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="/pandapaints/assets/bootstrap.min.js"></script>
 		<!-- Custom JS file -->
 		<script type="text/javascript" src="js/script.js"></script>
 
