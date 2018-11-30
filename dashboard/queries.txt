@@ -1,0 +1,3 @@
+SELECT p.spname as "Salesperson", SUM(s.amount) AS "Total" FROM salesorderline_13005 s INNER JOIN salesorder_13005 o ON o.order_no = s.order_no INNER JOIN salespersons_13005 p ON o.spid = p.spid GROUP BY p.spname;
+SELECT p.spname AS "Name", DATE(s.timestamp) AS "Date", COUNT(*) AS "Frequency" FROM salesorder_13005 s 
+INNER JOIN salespersons_13005 p ON p.spid = s.spid GROUP BY p.spname, DATE(s.timestamp) ORDER BY p.spname, s.timestamp;
