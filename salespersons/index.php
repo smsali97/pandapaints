@@ -31,8 +31,9 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 
 				
 			</style>
+			<li class=""><a href="/pandapaints/dashboard/">Dashboard</a></li>
 			<li class="active"><a href="/pandapaints/salespersons/">Salespersons</a></li>
-			<li><a href="/pandapaints/users/">Users</a></li>
+			<li class=""><a href="/pandapaints/users/">Users</a></li>
 		</ul>
 			<div class="pull-right">
 			<ul class="nav pull-right">

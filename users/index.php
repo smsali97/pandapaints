@@ -33,6 +33,7 @@ session_start(); // REQUIRED TO BE USED SESSION VARIABLES
 
 				
 			</style>
+			<li class=""><a href="/pandapaints/dashboard/">Dashboard</a></li>
 			<li ><a href="/pandapaints/salespersons/">Salespersons</a></li>
 			<li class="active"><a href="/pandapaints/users/">Users</a></li>
 		</ul>

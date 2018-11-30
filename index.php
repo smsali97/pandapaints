@@ -37,6 +37,8 @@
                 <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/salespersons/">Salespersons</a></li>
                 <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/users/">Users</a></li>
                 <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/salesvisits/">Sales Visits</a></li>
+                <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/payments/">Payments</a></li>
+                <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/dashboard/">Dashboard</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/pandapaints/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

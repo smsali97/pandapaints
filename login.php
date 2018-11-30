@@ -4,7 +4,7 @@ session_start();
     // check session is set (if user has already login, redirect to the profile page)
     if(isset($_SESSION['id']))
     {
-        if (!isset($_SESSION['spid'])) { header("location: /pandapaints/users/index.php"); }
+        if (!isset($_SESSION['spid'])) { header("location: /pandapaints/dashboard"); }
         else { header("location: /pandapaints/customers/index.php"); }
         exit;
     }
@@ -47,7 +47,7 @@ session_start();
                 // redirect to the secure page ex. user profile 
                 
                 // If admin
-                if (!isset($_SESSION['spid'])) { header("location: /pandapaints/users/index.php"); }
+                if (!isset($_SESSION['spid'])) { header("location: /pandapaints/dashboard"); }
                 else { header("location: /pandapaints/customers/index.php"); }
                 exit;
             }
@@ -90,6 +90,8 @@ session_start();
                 <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/salespersons/">Salespersons</a></li>
                 <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/users/">Users</a></li>
                 <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/salesvisits/">Sales Visits</a></li>
+                <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/payments/">Payments</a></li>
+                <li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/dashboard/">Dashboard</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/pandapaints/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

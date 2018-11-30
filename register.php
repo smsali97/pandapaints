@@ -3,7 +3,7 @@
 session_start(); // REQUIRED TO BE USED SESSION
 if(isset($_SESSION['id']))
 {
-	header("location: user_profile.php");
+	header("location: ccustomers");
 	exit;
 }
 ?>
@@ -42,6 +42,8 @@ if(isset($_SESSION['id']))
 				<li class="active"><a href="/pandapaints/register.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 				<li><a href="/pandapaints/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				<li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/salesvisits/">Sales Visits</a></li>
+				<li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/payments/">Payments</a></li>
+				<li class="nav-item disabled"><a class="nav-link disabled" href="/pandapaints/dashboard/">Dashboard</a></li>
 			</ul>
 		</div>
 	</nav> 
