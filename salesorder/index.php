@@ -57,6 +57,7 @@ if (!isset($_SESSION['id'])) {
 		        <li class="active"><a href="/pandapaints/salesorder/">Sales Order<span class="sr-only"></span></a></li>
 		        <li class=""><a href="/pandapaints/salesvisits/">Sales Visits<span class="sr-only"></span></a></li>
 		        <li class=""><a href="/pandapaints/customers/">Customers<span class="sr-only"></span></a></li>
+		        <li class=""><a href="/pandapaints/payments/">Payments<span class="sr-only"></span></a></li>
 		        <li class=""><a href="/pandapaints/products/">Products<span class="sr-only"></span></a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">

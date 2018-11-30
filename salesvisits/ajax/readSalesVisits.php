@@ -42,9 +42,9 @@
 
     	$data .='
     	  <div class="col-sm-12 col-md-12">
-    	    <div class="thumbnail">' . 
+    	' . 
     	    	$image_html
-    	      . '</div>
+    	      . '
               <div class="caption">
     	        <h3>Shop\'s picture of ' . $cname . '</h3>
     	        <p>

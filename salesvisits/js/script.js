@@ -16,13 +16,11 @@ $(document).ready ( () => {
 
 
 function deleteVisit(id) {
-    alert(id);
     $.ajax({
     url: "ajax/deleteVisit.php",
     type: "POST",
     data: { id },
     success: function (data, status) {
-      alert(data);
       readSalesVisits();
     }
   });
@@ -115,7 +113,8 @@ $("form[name='my-form']").submit(function(e) {
     url: "ajax/addSalesVisit.php",
     type: "POST",
     data: formData,
-    success: function (msg) {
+    success: function (data, msg) {
+      alert(data);
       readSalesVisits();
     },
     cache: false,

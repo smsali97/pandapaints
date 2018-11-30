@@ -14,7 +14,7 @@
 			<title>Field Survey Form</title>
 
 			<!-- Bootstrap CSS File -->
-			<link rel="stylesheet" href="/pandapaints/assets/bootstrap.min.css">
+			<link rel="stylesheet" href="/pandapaints/assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 
 			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
 			  />	
@@ -28,10 +28,12 @@
 				    text-align:center;
 				}
 
-				li {
-				    display: inline-block;
-				    float: none; /* this is the part that makes it work */
-				}
+				img {
+				   page-break-inside: avoid;
+				 }
+				 img {
+				   max-width: 50%;
+				 }
 				
 				 .map {
 				   width: 100%;
@@ -79,6 +81,7 @@
 		        <li class=""><a href="/pandapaints/salesorder/">Sales Order<span class="sr-only"></span></a></li>
 		        <li class="active"><a href="/pandapaints/salesvisits/">Sales Visits<span class="sr-only"></span></a></li>
 		        <li class=""><a href="/pandapaints/customers/">Customers<span class="sr-only"></span></a></li>
+		        <li class=""><a href="/pandapaints/payments/">Payments<span class="sr-only"></span></a></li>
 		        <li class=""><a href="/pandapaints/products/">Products<span class="sr-only"></span></a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">

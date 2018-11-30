@@ -34,6 +34,4 @@
 	    "image" => new MongoDB\BSON\Binary(file_get_contents($image["tmp_name"]), MongoDB\BSON\Binary::TYPE_GENERIC),
 	]);
 
-	printf("Inserted %d document(s)\n", $insertOneResult->getInsertedCount());
-
 ?>
